@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Speak Easy</title>
+    <meta name="description" content="Learn about Speak Easy's mission and meet our team of bilingual English instructors.">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="Home page.html" class="logo">
+                <img src="logo.png" alt="Speak Easy Logo" class="logo-image">
+                <span class="logo-text" data-i18n-key="nav_logo">Speak Easy</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="Home page.html" data-i18n-key="nav_home">Home</a></li>
+                <li><a href="About.html" data-i18n-key="nav_about">About</a></li>
+                <li><a href="Program_description.html" data-i18n-key="nav_programs">Programs</a></li>
+                <li><a href="Example_lesson.html" data-i18n-key="nav_example">Example Lesson</a></li>
+                <li class="nav-language-item">
+                    <div class="lesson-language-toggle">
+                        <button type="button" class="lang-toggle-btn active" data-lang-btn="en">English</button>
+                        <button type="button" class="lang-toggle-btn" data-lang-btn="fr">Français</button>
+                    </div>
+                </li>
+                <li><a href="Log_in.html" id="loginLink" data-i18n-key="nav_login">Login</a></li>
+            </ul>
+            <!-- User Profile Dropdown -->
+            <div class="user-profile" id="userProfile" style="display: none;">
+                <div class="profile-icon" id="profileIcon">
+                    <span id="userInitials">JD</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="dropdown-header">
+                        <div class="user-info">
+                            <div class="user-name" id="userName">John Doe</div>
+                            <div class="user-email" id="userEmail">john.doe@example.com</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="Profile.html" class="dropdown-item">
+                            <span class="dropdown-icon">👤</span>
+                            <span data-i18n-key="profile_menu_profile">Profile</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">🛒</span>
+                            <span data-i18n-key="profile_menu_purchases">Purchases</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">📚</span>
+                            <span data-i18n-key="profile_menu_future">Future Lessons</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">⚙️</span>
+                            <span data-i18n-key="profile_menu_settings">Settings</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout-item" id="logoutBtn">
+                            <span class="dropdown-icon">🚪</span>
+                            <span data-i18n-key="profile_menu_logout">Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- About Section -->
+        <section class="about-section">
+            <h1 class="section-title" data-i18n-key="about_title">About Speak Easy</h1>
+
+            <!-- Story Section -->
+            <div class="story-section">
+                <div class="story-content">
+                    <h2 data-i18n-key="about_story_title">The Speak Easy Story</h2>
+                    <div class="story-text">
+                        <p class="story-intro" data-i18n-key="about_story_intro">
+                            Speak Easy takes its name from the secret speakeasies of the 1920s — hidden spots where people gathered to talk freely and feel at ease. We bring that same relaxed energy to English learning.
+                        </p>
+                        <p class="story-description" data-i18n-key="about_story_description">
+                            In small, conversation-based sessions led by young, native English speakers, French teens aged 13–15 build real confidence, not just vocabulary. At Speak Easy, your child feels comfortable, connected, and ready to find confidence in every conversation.
+                        </p>
+                        <div class="story-highlight">
+                            <p data-i18n-key="about_story_highlight"><strong>Confidence in Every Conversation</strong> — That's our promise to every student who walks through our virtual doors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What Sets Us Apart Section -->
+            <div class="what-sets-us-apart">
+                <h2 class="section-title" data-i18n-key="about_what_title">What Sets Us Apart</h2>
+                <div class="unique-features-grid">
+                    <div class="unique-feature-card">
+                        <div class="feature-icon">💻</div>
+                        <h3 data-i18n-key="about_feature1_title">One-on-One Zoom Sessions</h3>
+                        <p data-i18n-key="about_feature1_text">Experience personalized learning through individual Zoom sessions with native English speakers. Each session is carefully designed around engaging video content, ensuring that every conversation is relevant, meaningful, and tailored to your learning journey.</p>
+                        <ul class="feature-highlights">
+                            <li data-i18n-key="about_feature1_point1"><strong>Personalized attention:</strong> Focus entirely on your progress and goals</li>
+                            <li data-i18n-key="about_feature1_point2"><strong>Video-based learning:</strong> Conversations built around educational videos you've watched</li>
+                            <li data-i18n-key="about_feature1_point3"><strong>Flexible scheduling:</strong> Learn at your own pace and convenience</li>
+                            <li data-i18n-key="about_feature1_point4"><strong>Safe environment:</strong> Practice without fear in a judgment-free zone</li>
+                        </ul>
+                    </div>
+                    <div class="unique-feature-card">
+                        <div class="feature-icon">🗼</div>
+                        <h3 data-i18n-key="about_feature2_title">Live Paris Experience</h3>
+                        <p data-i18n-key="about_feature2_text">Take your English learning beyond the screen with our unique in-person experiences in Paris. Join small groups of 3-5 students to explore museums, parks, and cultural sites while practicing English in real-world contexts.</p>
+                        <ul class="feature-highlights">
+                            <li data-i18n-key="about_feature2_point1"><strong>Real-world practice:</strong> Speak English in authentic, engaging situations</li>
+                            <li data-i18n-key="about_feature2_point2"><strong>Cultural immersion:</strong> Discover Paris while building language confidence</li>
+                            <li data-i18n-key="about_feature2_point3"><strong>Small groups:</strong> Maximum 5 students for personalized interaction</li>
+                            <li data-i18n-key="about_feature2_point4"><strong>Memorable learning:</strong> Create lasting memories while improving your English</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h2 data-i18n-key="about_mission_title">Our Mission</h2>
+                    <p data-i18n-key="about_mission_text">
+                        Our mission is to create a safe, comfortable space where French teenagers can practice English
+                        without fear or judgment. Through authentic conversations with native speakers, we help students
+                        build genuine confidence that extends far beyond the classroom.
+                    </p>
+                </div>
+                <div class="mission-image">
+                    <img src="Bicking.jpg"/>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <h2 data-i18n-key="about_team_title">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h3>Juliette</h3>
+                        <img src="Juliette.jpeg"/>
+                        <p data-i18n-key="about_team_juliette_1">18 years old</p>
+                        <p data-i18n-key="about_team_juliette_2">Languages spoken: English and French</p>
+                        <p data-i18n-key="about_team_juliette_3">Highschool student in Terminal</p>
+                        <p data-i18n-key="about_team_juliette_4">Has experience in child care in English</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Chloe</h3>
+                        <img src="Chloe.jpeg"/>
+                        <p data-i18n-key="about_team_chloe_1">21 years old</p>
+                        <p data-i18n-key="about_team_chloe_2">Languages spoken: English and French</p>
+                        <p data-i18n-key="about_team_chloe_3">Undergrad student in Environment at McGill university</p>
+                        <p data-i18n-key="about_team_chloe_4">Has experience in tutoring bilingual children in English</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sign Up Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <h2 data-i18n-key="about_signup_title">Ready to Start Your English Learning Journey?</h2>
+            <p data-i18n-key="about_signup_text">Join thousands of students improving their English skills with Speak Easy</p>
+            <a href="Sign_up.html" class="btn-signup" data-i18n-key="about_signup_button">Sign Up Now</a>
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            const translations = {
+                en: {
+                    nav_logo: 'Speak Easy',
+                    nav_home: 'Home',
+                    nav_about: 'About',
+                    nav_programs: 'Programs',
+                    nav_example: 'Example Lesson',
+                    nav_login: 'Login',
+                    profile_menu_profile: 'Profile',
+                    profile_menu_purchases: 'Purchases',
+                    profile_menu_future: 'Future Lessons',
+                    profile_menu_settings: 'Settings',
+                    profile_menu_logout: 'Logout',
+                    about_title: 'About Speak Easy',
+                    about_story_title: 'The Speak Easy Story',
+                    about_story_intro: 'Speak Easy takes its name from the secret speakeasies of the 1920s — hidden spots where people gathered to talk freely and feel at ease. We bring that same relaxed energy to English learning.',
+                    about_story_description: 'In small, conversation-based sessions led by young, native English speakers, French teens aged 13–15 build real confidence, not just vocabulary. At Speak Easy, your child feels comfortable, connected, and ready to find confidence in every conversation.',
+                    about_story_highlight: '<strong>Confidence in Every Conversation</strong> — That\'s our promise to every student who walks through our virtual doors.',
+                    about_what_title: 'What Sets Us Apart',
+                    about_feature1_title: 'One-on-One Zoom Sessions',
+                    about_feature1_text: 'Experience personalized learning through individual Zoom sessions with native English speakers. Each session is carefully designed around engaging video content, ensuring that every conversation is relevant, meaningful, and tailored to your learning journey.',
+                    about_feature1_point1: '<strong>Personalized attention:</strong> Focus entirely on your progress and goals',
+                    about_feature1_point2: '<strong>Video-based learning:</strong> Conversations built around educational videos you\'ve watched',
+                    about_feature1_point3: '<strong>Flexible scheduling:</strong> Learn at your own pace and convenience',
+                    about_feature1_point4: '<strong>Safe environment:</strong> Practice without fear in a judgment-free zone',
+                    about_feature2_title: 'Live Paris Experience',
+                    about_feature2_text: 'Take your English learning beyond the screen with our unique in-person experiences in Paris. Join small groups of 3-5 students to explore museums, parks, and cultural sites while practicing English in real-world contexts.',
+                    about_feature2_point1: '<strong>Real-world practice:</strong> Speak English in authentic, engaging situations',
+                    about_feature2_point2: '<strong>Cultural immersion:</strong> Discover Paris while building language confidence',
+                    about_feature2_point3: '<strong>Small groups:</strong> Maximum 5 students for personalized interaction',
+                    about_feature2_point4: '<strong>Memorable learning:</strong> Create lasting memories while improving your English',
+                    about_mission_title: 'Our Mission',
+                    about_mission_text: 'Our mission is to create a safe, comfortable space where French teenagers can practice English without fear or judgment. Through authentic conversations with native speakers, we help students build genuine confidence that extends far beyond the classroom.',
+                    about_team_title: 'Our Team',
+                    about_team_juliette_1: '18 years old',
+                    about_team_juliette_2: 'Languages spoken: English and French',
+                    about_team_juliette_3: 'Highschool student in Terminal',
+                    about_team_juliette_4: 'Has experience in child care in English',
+                    about_team_chloe_1: '21 years old',
+                    about_team_chloe_2: 'Languages spoken: English and French',
+                    about_team_chloe_3: 'Undergrad student in Environment at McGill university',
+                    about_team_chloe_4: 'Has experience in tutoring bilingual children in English',
+                    about_signup_title: 'Ready to Start Your English Learning Journey?',
+                    about_signup_text: 'Join thousands of students improving their English skills with Speak Easy',
+                    about_signup_button: 'Sign Up Now'
+                },
+                fr: {
+                    nav_logo: 'Speak Easy',
+                    nav_home: 'Accueil',
+                    nav_about: 'À propos',
+                    nav_programs: 'Programmes',
+                    nav_example: "Leçon d'exemple",
+                    nav_login: 'Connexion',
+                    profile_menu_profile: 'Profil',
+                    profile_menu_purchases: 'Achats',
+                    profile_menu_future: 'Leçons futures',
+                    profile_menu_settings: 'Paramètres',
+                    profile_menu_logout: 'Déconnexion',
+                    about_title: 'À propos de Speak Easy',
+                    about_story_title: "L'histoire de Speak Easy",
+                    about_story_intro: 'Speak Easy tire son nom des speakeasies secrets des années 1920 — des lieux cachés où les gens pouvaient parler librement et se sentir à l’aise. Nous apportons cette même énergie détendue à l’apprentissage de l’anglais.',
+                    about_story_description: "En petits groupes de conversation animés par de jeunes locuteurs natifs anglophones, des ados français de 13 à 15 ans gagnent une vraie confiance, pas seulement du vocabulaire. À Speak Easy, votre enfant se sent à l’aise, connecté et prêt à prendre confiance dans chaque conversation.",
+                    about_story_highlight: "<strong>La confiance dans chaque conversation</strong> — c’est notre promesse à chaque élève qui pousse la porte de Speak Easy.",
+                    about_what_title: 'Ce qui nous rend uniques',
+                    about_feature1_title: 'Séances Zoom individuelles',
+                    about_feature1_text: "Profite d’un apprentissage personnalisé grâce à des séances individuelles sur Zoom avec des natifs anglophones. Chaque séance est construite autour de vidéos engageantes pour que chaque conversation soit pertinente, motivante et adaptée à ton niveau.",
+                    about_feature1_point1: '<strong>Attention personnalisée :</strong> 100 % centrée sur tes progrès et tes objectifs',
+                    about_feature1_point2: '<strong>Apprentissage par la vidéo :</strong> des conversations basées sur des vidéos éducatives que tu as regardées',
+                    about_feature1_point3: '<strong>Horaires flexibles :</strong> apprends à ton rythme, selon ton emploi du temps',
+                    about_feature1_point4: '<strong>Cadre rassurant :</strong> pratique sans crainte, dans un espace bienveillant',
+                    about_feature2_title: 'Expérience Paris en direct',
+                    about_feature2_text: "Va au-delà de l’écran grâce à nos expériences uniques en présentiel à Paris. En petits groupes de 3 à 5 élèves, explore des musées, des parcs et des lieux culturels tout en pratiquant l’anglais dans des situations réelles.",
+                    about_feature2_point1: '<strong>Pratique réelle :</strong> parle anglais dans des situations authentiques et ludiques',
+                    about_feature2_point2: '<strong>Immersion culturelle :</strong> découvre Paris tout en gagnant en confiance en anglais',
+                    about_feature2_point3: '<strong>Petits groupes :</strong> maximum 5 élèves pour plus de participation',
+                    about_feature2_point4: '<strong>Souvenirs durables :</strong> vis des moments forts tout en progressant en anglais',
+                    about_mission_title: 'Notre mission',
+                    about_mission_text: "Notre mission est de créer un espace sûr et chaleureux où les adolescents français peuvent pratiquer l’anglais sans peur ni jugement. Grâce à des conversations authentiques avec des natifs, nous les aidons à construire une vraie confiance qui dépasse largement la salle de classe.",
+                    about_team_title: 'Notre équipe',
+                    about_team_juliette_1: '18 ans',
+                    about_team_juliette_2: 'Langues parlées : anglais et français',
+                    about_team_juliette_3: 'Lycéenne en Terminale',
+                    about_team_juliette_4: "Expérience en garde d’enfants en anglais",
+                    about_team_chloe_1: '21 ans',
+                    about_team_chloe_2: 'Langues parlées : anglais et français',
+                    about_team_chloe_3: 'Étudiante en environnement à l’université McGill',
+                    about_team_chloe_4: 'Expérience en soutien scolaire bilingue en anglais',
+                    about_signup_title: "Prêt à commencer ton aventure en anglais ?",
+                    about_signup_text: "Rejoins les milliers d’élèves qui améliorent leur anglais avec Speak Easy",
+                    about_signup_button: "Je m'inscris"
+                }
+            };
+
+            function setLanguage(lang) {
+                const selectedLang = lang === 'fr' ? 'fr' : 'en';
+                document.documentElement.lang = selectedLang;
+
+                document.querySelectorAll('[data-i18n-key]').forEach(function(el) {
+                    const key = el.getAttribute('data-i18n-key');
+                    const translation = translations[selectedLang] && translations[selectedLang][key];
+                    if (translation) {
+                        el.innerHTML = translation;
+                    }
+                });
+
+                document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+                    btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === selectedLang);
+                });
+
+                localStorage.setItem('exampleLessonLang', selectedLang);
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedLang = localStorage.getItem('exampleLessonLang') || 'en';
+                setLanguage(savedLang);
+
+                document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+                    btn.addEventListener('click', function() {
+                        setLanguage(this.getAttribute('data-lang-btn'));
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

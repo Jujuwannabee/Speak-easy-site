@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Details - Speak Easy</title>
+    <meta name="description" content="Learn about our comprehensive English learning program structure and methodology.">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="Home page.html" class="logo">
+                <img src="logo.png" alt="Speak Easy Logo" class="logo-image">
+                <span class="logo-text" data-i18n-key="nav_logo">Speak Easy</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="Home page.html" data-i18n-key="nav_home">Home</a></li>
+                <li><a href="About.html" data-i18n-key="nav_about">About</a></li>
+                <li><a href="Program_description.html" data-i18n-key="nav_programs">Programs</a></li>
+                <li><a href="Example_lesson.html" data-i18n-key="nav_example">Example Lesson</a></li>
+                <li class="nav-language-item">
+                    <div class="lesson-language-toggle">
+                        <button type="button" class="lang-toggle-btn active" data-lang-btn="en">English</button>
+                        <button type="button" class="lang-toggle-btn" data-lang-btn="fr">Français</button>
+                    </div>
+                </li>
+                <li><a href="Log_in.html" id="loginLink" data-i18n-key="nav_login">Login</a></li>
+            </ul>
+            <!-- User Profile Dropdown -->
+            <div class="user-profile" id="userProfile" style="display: none;">
+                <div class="profile-icon" id="profileIcon">
+                    <span id="userInitials">JD</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="dropdown-header">
+                        <div class="user-info">
+                            <div class="user-name" id="userName">John Doe</div>
+                            <div class="user-email" id="userEmail">john.doe@example.com</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="Profile.html" class="dropdown-item">
+                            <span class="dropdown-icon">👤</span>
+                            <span data-i18n-key="profile_menu_profile">Profile</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">🛒</span>
+                            <span data-i18n-key="profile_menu_purchases">Purchases</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">📚</span>
+                            <span data-i18n-key="profile_menu_future">Future Lessons</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">⚙️</span>
+                            <span data-i18n-key="profile_menu_settings">Settings</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout-item" id="logoutBtn">
+                            <span class="dropdown-icon">🚪</span>
+                            <span data-i18n-key="profile_menu_logout">Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <section class="about-section">
+            <h1 class="section-title" data-i18n-key="program_title">Program Details</h1>
+            
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h2 data-i18n-key="program_desc_title">Program Description</h2>
+                    <p data-i18n-key="program_desc_text">
+                        Our comprehensive program is designed to improve oral expression through structured learning. 
+                        Each lesson is divided into three distinct phases, culminating in a conversation with a bilingual 
+                        instructor to ensure maximum learning effectiveness.
+                    </p>
+                </div>
+                
+                <div class="mission-text">
+                    <h2 data-i18n-key="program_process_title">Learning Process</h2>
+                    <div class="goals-grid">
+                        <div class="goal-card">
+                            <h3 data-i18n-key="program_step1_title">Step 1: Video Preparation</h3>
+                            <p data-i18n-key="program_step1_text">Watch an educational video covering the lesson topic before your session to build foundational knowledge.</p>
+                        </div>
+                        <div class="goal-card">
+                            <h3 data-i18n-key="program_step2_title">Step 2: Vocabulary Building</h3>
+                            <p data-i18n-key="program_step2_text">Learn and practice the essential vocabulary list related to the lesson theme.</p>
+                        </div>
+                        <div class="goal-card">
+                            <h3 data-i18n-key="program_step3_title">Step 3: Live Practice</h3>
+                            <p data-i18n-key="program_step3_text">Engage in a 30-minute to 1-hour lesson with a qualified bilingual instructor for hands-on practice.</p>
+                        </div>
+                        <div class="goal-card">
+                            <h3 data-i18n-key="program_step4_title">Step 4: Live Paris Experience</h3>
+                            <p data-i18n-key="program_step4_text">Meet in Paris for an exciting "live" conversation adventure! Explore museums, parks, or other activities with a small group (3-5 students) while practicing English in real-world situations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sign Up Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <h2 data-i18n-key="program_signup_title">Ready to Start Your English Learning Journey?</h2>
+            <p data-i18n-key="program_signup_text">Join thousands of students improving their English skills with Speak Easy</p>
+            <a href="Sign_up.html" class="btn-signup" data-i18n-key="program_signup_button">Sign Up Now</a>
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            const translations = {
+                en: {
+                    nav_logo: 'Speak Easy',
+                    nav_home: 'Home',
+                    nav_about: 'About',
+                    nav_programs: 'Programs',
+                    nav_example: 'Example Lesson',
+                    nav_login: 'Login',
+                    profile_menu_profile: 'Profile',
+                    profile_menu_purchases: 'Purchases',
+                    profile_menu_future: 'Future Lessons',
+                    profile_menu_settings: 'Settings',
+                    profile_menu_logout: 'Logout',
+                    program_title: 'Program Details',
+                    program_desc_title: 'Program Description',
+                    program_desc_text: 'Our comprehensive program is designed to improve oral expression through structured learning. Each lesson is divided into three distinct phases, culminating in a conversation with a bilingual instructor to ensure maximum learning effectiveness.',
+                    program_process_title: 'Learning Process',
+                    program_step1_title: 'Step 1: Video Preparation',
+                    program_step1_text: 'Watch an educational video covering the lesson topic before your session to build foundational knowledge.',
+                    program_step2_title: 'Step 2: Vocabulary Building',
+                    program_step2_text: 'Learn and practice the essential vocabulary list related to the lesson theme.',
+                    program_step3_title: 'Step 3: Live Practice',
+                    program_step3_text: 'Engage in a 30-minute to 1-hour lesson with a qualified bilingual instructor for hands-on practice.',
+                    program_step4_title: 'Step 4: Live Paris Experience',
+                    program_step4_text: 'Meet in Paris for an exciting "live" conversation adventure! Explore museums, parks, or other activities with a small group (3-5 students) while practicing English in real-world situations.',
+                    program_signup_title: 'Ready to Start Your English Learning Journey?',
+                    program_signup_text: 'Join thousands of students improving their English skills with Speak Easy',
+                    program_signup_button: 'Sign Up Now'
+                },
+                fr: {
+                    nav_logo: 'Speak Easy',
+                    nav_home: 'Accueil',
+                    nav_about: 'À propos',
+                    nav_programs: 'Programmes',
+                    nav_example: "Leçon d'exemple",
+                    nav_login: 'Connexion',
+                    profile_menu_profile: 'Profil',
+                    profile_menu_purchases: 'Achats',
+                    profile_menu_future: 'Leçons futures',
+                    profile_menu_settings: 'Paramètres',
+                    profile_menu_logout: 'Déconnexion',
+                    program_title: 'Détails du programme',
+                    program_desc_title: 'Description du programme',
+                    program_desc_text: "Notre programme complet est conçu pour améliorer l’expression orale grâce à une progression structurée. Chaque leçon est divisée en trois phases, puis se termine par une conversation avec un·e enseignant·e bilingue pour garantir une efficacité maximale.",
+                    program_process_title: "Le déroulement de l'apprentissage",
+                    program_step1_title: 'Étape 1 : Préparation vidéo',
+                    program_step1_text: 'Regarde une vidéo éducative sur le thème de la leçon avant ta séance pour poser les bases.',
+                    program_step2_title: 'Étape 2 : Vocabulaire',
+                    program_step2_text: 'Apprends et révise la liste de vocabulaire essentielle liée au thème de la leçon.',
+                    program_step3_title: 'Étape 3 : Pratique en direct',
+                    program_step3_text: 'Participe à une leçon de 30 minutes à 1 heure avec un·e enseignant·e bilingue pour pratiquer concrètement.',
+                    program_step4_title: 'Étape 4 : Expérience Paris en direct',
+                    program_step4_text: 'Retrouve-nous à Paris pour une aventure de conversation "en direct" ! Explore des musées, des parcs ou d’autres activités en petit groupe (3–5 élèves) tout en pratiquant l’anglais en situation réelle.',
+                    program_signup_title: "Prêt à commencer ton aventure en anglais ?",
+                    program_signup_text: "Rejoins les milliers d’élèves qui améliorent leur anglais avec Speak Easy",
+                    program_signup_button: "Je m'inscris"
+                }
+            };
+
+            function setLanguage(lang) {
+                const selectedLang = lang === 'fr' ? 'fr' : 'en';
+                document.documentElement.lang = selectedLang;
+
+                document.querySelectorAll('[data-i18n-key]').forEach(function(el) {
+                    const key = el.getAttribute('data-i18n-key');
+                    const translation = translations[selectedLang] && translations[selectedLang][key];
+                    if (translation) {
+                        el.innerHTML = translation;
+                    }
+                });
+
+                document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+                    btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === selectedLang);
+                });
+
+                localStorage.setItem('exampleLessonLang', selectedLang);
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedLang = localStorage.getItem('exampleLessonLang') || 'en';
+                setLanguage(savedLang);
+
+                document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+                    btn.addEventListener('click', function() {
+                        setLanguage(this.getAttribute('data-lang-btn'));
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

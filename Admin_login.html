@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Speak Easy</title>
+    <meta name="description" content="Admin access to Speak Easy dashboard">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="Home page.html" class="logo">
+                <img src="logo.png" alt="Speak Easy Logo" class="logo-image">
+                <span class="logo-text">Speak Easy</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Program_description.html">Programs</a></li>
+                <li><a href="Example_lesson.html">Example Lesson</a></li>
+                <li><a href="Log_in.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="login-container">
+            <h1 class="login-title">Admin Login</h1>
+            <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">Access the admin dashboard</p>
+            <form id="adminLoginForm" class="login-form">
+                <div class="form-group">
+                    <label for="adminEmail">Email</label>
+                    <input type="email" id="adminEmail" name="adminEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" name="adminPassword" required>
+                </div>
+                <button type="submit" class="btn-primary">Sign In as Admin</button>
+            </form>
+            
+            <div class="forgot-password" style="text-align: center; margin-top: 1.5rem;">
+                <a href="Log_in.html" class="forgot-link">← Back to regular login</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+

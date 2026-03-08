@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speak Easy - Professional English Learning Platform</title>
+    <meta name="description" content="Professional English language learning platform for students. Improve your English skills through interactive video courses with native speakers.">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="Home page.html" class="logo">
+                <img src="logo.png" alt="Speak Easy Logo" class="logo-image">
+                <span class="logo-text" data-i18n-key="nav_logo">Speak Easy</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="Home page.html" data-i18n-key="nav_home">Home</a></li>
+                <li><a href="About.html" data-i18n-key="nav_about">About</a></li>
+                <li><a href="Program_description.html" data-i18n-key="nav_programs">Programs</a></li>
+                <li><a href="Example_lesson.html" data-i18n-key="nav_example">Example Lesson</a></li>
+                <li class="nav-language-item">
+                    <div class="lesson-language-toggle">
+                        <button type="button" class="lang-toggle-btn active" data-lang-btn="en">English</button>
+                        <button type="button" class="lang-toggle-btn" data-lang-btn="fr">Français</button>
+                    </div>
+                </li>
+                <li><a href="Log_in.html" id="loginLink" data-i18n-key="nav_login">Login</a></li>
+            </ul>
+            <!-- User Profile Dropdown -->
+            <div class="user-profile" id="userProfile" style="display: none;">
+                <div class="profile-icon" id="profileIcon">
+                    <span id="userInitials">JD</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="dropdown-header">
+                        <div class="user-info">
+                            <div class="user-name" id="userName">John Doe</div>
+                            <div class="user-email" id="userEmail">john.doe@example.com</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="Profile.html" class="dropdown-item">
+                            <span class="dropdown-icon">👤</span>
+                            <span data-i18n-key="profile_menu_profile">Profile</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">🛒</span>
+                            <span data-i18n-key="profile_menu_purchases">Purchases</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">📚</span>
+                            <span data-i18n-key="profile_menu_future">Future Lessons</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">⚙️</span>
+                            <span data-i18n-key="profile_menu_settings">Settings</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout-item" id="logoutBtn">
+                            <span class="dropdown-icon">🚪</span>
+                            <span data-i18n-key="profile_menu_logout">Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="logo.png" alt="Speak Easy Logo" class="hero-logo-image">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title" data-i18n-key="home_hero_title">Speak Easy</h1>
+                    <p class="hero-subtitle" data-i18n-key="home_hero_subtitle">
+                        Speak Easy takes its name from the secret speakeasies of the 1920s — hidden spots where people gathered to talk freely and feel at ease. We bring that same relaxed energy to English learning.
+                    </p>
+                    <p class="hero-description" data-i18n-key="home_hero_description">
+                        In small, conversation-based sessions led by young, native English speakers, French teens aged 13–15 build real confidence, not just vocabulary. At Speak Easy, your child feels comfortable, connected, and ready to find confidence in every conversation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Goals Section -->
+        <section class="goals-section">
+            <h2 class="section-title" data-i18n-key="home_why_title">Why Choose Speak Easy?</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <h3 data-i18n-key="home_goal1_title">🎭 The Speakeasy Experience</h3>
+                    <p data-i18n-key="home_goal1_text">Just like the hidden speakeasies of the 1920s, we create a safe, comfortable space where teens can speak freely without judgment or pressure.</p>
+                </div>
+                <div class="goal-card">
+                    <h3 data-i18n-key="home_goal2_title">🗣️ Real Conversations</h3>
+                    <p data-i18n-key="home_goal2_text">Small, intimate sessions with young native English speakers help French teens aged 13-15 build genuine confidence through authentic dialogue.</p>
+                </div>
+                <div class="goal-card">
+                    <h3 data-i18n-key="home_goal3_title">💪 Confidence Building</h3>
+                    <p data-i18n-key="home_goal3_text">We focus on building real confidence, not just vocabulary. Your child will feel comfortable, connected, and ready for every conversation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Vocabulary Game Section -->
+        <section class="game-section">
+            <h2 class="game-title" data-i18n-key="home_game_title">🎮 Vocabulary Challenge</h2>
+            <p class="game-subtitle" data-i18n-key="home_game_subtitle">Match French words with their English translations to improve your vocabulary!</p>
+            
+            <div class="game-container">
+                <div class="game-info">
+                    <div class="score-display">
+                        <span data-i18n-key="home_game_score_label">Score:</span> <span id="score">0</span> / <span id="total">0</span>
+                    </div>
+                    <div class="category-display" id="categoryDisplay">
+                        <span data-i18n-key="home_game_category_label">Category:</span> <span id="currentCategory" data-i18n-key="home_game_category_current">Select a category</span>
+                    </div>
+                </div>
+                
+                <div class="category-selector">
+                    <label for="categorySelect" data-i18n-key="home_game_category_choose">Choose Vocabulary Category:</label>
+                    <select id="categorySelect" class="category-select">
+                        <option value="" data-i18n-key="home_game_cat_random">Random Category</option>
+                        <option value="0" data-i18n-key="home_game_cat_0">Greetings & Politeness</option>
+                        <option value="1" data-i18n-key="home_game_cat_1">Animals</option>
+                        <option value="2" data-i18n-key="home_game_cat_2">Colors</option>
+                        <option value="3" data-i18n-key="home_game_cat_3">Numbers</option>
+                        <option value="4" data-i18n-key="home_game_cat_4">Fruits & Vegetables</option>
+                        <option value="5" data-i18n-key="home_game_cat_5">Family Members</option>
+                        <option value="6" data-i18n-key="home_game_cat_6">School & Learning</option>
+                        <option value="7" data-i18n-key="home_game_cat_7">Weather & Seasons</option>
+                        <option value="8" data-i18n-key="home_game_cat_8">Body Parts</option>
+                        <option value="9" data-i18n-key="home_game_cat_9">Food & Drinks</option>
+                        <option value="10" data-i18n-key="home_game_cat_10">Clothing & Fashion</option>
+                        <option value="11" data-i18n-key="home_game_cat_11">House & Home</option>
+                        <option value="12" data-i18n-key="home_game_cat_12">Transportation</option>
+                    </select>
+                </div>
+                
+                <div class="game-sections">
+                    <div class="french-section">
+                        <h3 data-i18n-key="home_game_french_title">🇫🇷 French Words</h3>
+                        <div class="french-grid" id="frenchGrid">
+                            <!-- French words will be generated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="english-section">
+                        <h3 data-i18n-key="home_game_english_title">🇬🇧 English Words</h3>
+                        <div class="english-grid" id="englishGrid">
+                            <!-- English words will be generated here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-controls">
+                    <button class="btn-game" id="newGameBtn" data-i18n-key="home_game_new">New Game</button>
+                    <button class="btn-game" id="hintBtn" data-i18n-key="home_game_hint">Hint</button>
+                    <button class="btn-game" id="resetBtn" data-i18n-key="home_game_reset">Reset</button>
+                </div>
+                
+                <div id="feedbackMessage" class="feedback-message" style="display: none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2 data-i18n-key="home_contact_title">Contact Us If You Have Any Questions</h2>
+            <p data-i18n-key="home_contact_text">We're here to help! Feel free to reach out to us.</p>
+            <div class="contact-email">
+                <a href="mailto:parisspeakeasy@gmail.com" class="contact-email-link">parisspeakeasy@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <h2 data-i18n-key="home_signup_title">Ready to Start Your English Learning Journey?</h2>
+            <p data-i18n-key="home_signup_text">Join the many students improving their English skills with Speak Easy</p>
+            <a href="Sign_up.html" class="btn-signup" data-i18n-key="home_signup_button">Sign Up Now</a>
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            const translations = {
+                en: {
+                    nav_logo: 'Speak Easy',
+                    nav_home: 'Home',
+                    nav_about: 'About',
+                    nav_programs: 'Programs',
+                    nav_example: 'Example Lesson',
+                    nav_login: 'Login',
+                    profile_menu_profile: 'Profile',
+                    profile_menu_purchases: 'Purchases',
+                    profile_menu_future: 'Future Lessons',
+                    profile_menu_settings: 'Settings',
+                    profile_menu_logout: 'Logout',
+                    home_hero_title: 'Speak Easy',
+                    home_hero_subtitle: 'Speak Easy takes its name from the secret speakeasies of the 1920s — hidden spots where people gathered to talk freely and feel at ease. We bring that same relaxed energy to English learning.',
+                    home_hero_description: 'In small, conversation-based sessions led by young, native English speakers, French teens aged 13–15 build real confidence, not just vocabulary. At Speak Easy, your child feels comfortable, connected, and ready to find confidence in every conversation.',
+                    home_why_title: 'Why Choose Speak Easy?',
+                    home_goal1_title: '🎭 The Speakeasy Experience',
+                    home_goal1_text: 'Just like the hidden speakeasies of the 1920s, we create a safe, comfortable space where teens can speak freely without judgment or pressure.',
+                    home_goal2_title: '🗣️ Real Conversations',
+                    home_goal2_text: 'Small, intimate sessions with young native English speakers help French teens aged 13-15 build genuine confidence through authentic dialogue.',
+                    home_goal3_title: '💪 Confidence Building',
+                    home_goal3_text: 'We focus on building real confidence, not just vocabulary. Your child will feel comfortable, connected, and ready for every conversation.',
+                    home_game_title: '🎮 Vocabulary Challenge',
+                    home_game_subtitle: 'Match French words with their English translations to improve your vocabulary!',
+                    home_game_score_label: 'Score:',
+                    home_game_category_label: 'Category:',
+                    home_game_category_current: 'Select a category',
+                    home_game_category_choose: 'Choose Vocabulary Category:',
+                    home_game_cat_random: 'Random Category',
+                    home_game_cat_0: 'Greetings & Politeness',
+                    home_game_cat_1: 'Animals',
+                    home_game_cat_2: 'Colors',
+                    home_game_cat_3: 'Numbers',
+                    home_game_cat_4: 'Fruits & Vegetables',
+                    home_game_cat_5: 'Family Members',
+                    home_game_cat_6: 'School & Learning',
+                    home_game_cat_7: 'Weather & Seasons',
+                    home_game_cat_8: 'Body Parts',
+                    home_game_cat_9: 'Food & Drinks',
+                    home_game_cat_10: 'Clothing & Fashion',
+                    home_game_cat_11: 'House & Home',
+                    home_game_cat_12: 'Transportation',
+                    home_game_french_title: '🇫🇷 French Words',
+                    home_game_english_title: '🇬🇧 English Words',
+                    home_game_new: 'New Game',
+                    home_game_hint: 'Hint',
+                    home_game_reset: 'Reset',
+                    home_contact_title: 'Contact Us If You Have Any Questions',
+                    home_contact_text: "We're here to help! Feel free to reach out to us.",
+                    home_signup_title: 'Ready to Start Your English Learning Journey?',
+                    home_signup_text: 'Join the many students improving their English skills with Speak Easy',
+                    home_signup_button: 'Sign Up Now'
+                },
+                fr: {
+                    nav_logo: 'Speak Easy',
+                    nav_home: 'Accueil',
+                    nav_about: 'À propos',
+                    nav_programs: 'Programmes',
+                    nav_example: "Leçon d'exemple",
+                    nav_login: 'Connexion',
+                    profile_menu_profile: 'Profil',
+                    profile_menu_purchases: 'Achats',
+                    profile_menu_future: 'Leçons futures',
+                    profile_menu_settings: 'Paramètres',
+                    profile_menu_logout: 'Déconnexion',
+                    home_hero_title: 'Speak Easy',
+                    home_hero_subtitle: 'Speak Easy tire son nom des speakeasies secrets des années 1920 — des lieux cachés où les gens pouvaient parler librement et se sentir à l’aise. Nous apportons cette même énergie détendue à l’apprentissage de l’anglais.',
+                    home_hero_description: "En petits groupes de conversation animés par de jeunes locuteurs natifs anglophones, des ados français de 13 à 15 ans gagnent une vraie confiance, pas seulement du vocabulaire. À Speak Easy, votre enfant se sent à l’aise, connecté et prêt à prendre confiance dans chaque conversation.",
+                    home_why_title: 'Pourquoi choisir Speak Easy ?',
+                    home_goal1_title: '🎭 L’expérience speakeasy',
+                    home_goal1_text: "Comme dans les speakeasies cachés des années 1920, nous créons un espace sûr et chaleureux où les ados peuvent parler librement, sans jugement ni pression.",
+                    home_goal2_title: '🗣️ De vraies conversations',
+                    home_goal2_text: 'De petites séances avec de jeunes natifs anglophones aident les ados français de 13 à 15 ans à construire une confiance réelle grâce à un dialogue authentique.',
+                    home_goal3_title: '💪 Gagner en confiance',
+                    home_goal3_text: 'Nous mettons l’accent sur la confiance, pas seulement sur le vocabulaire. Votre enfant se sentira à l’aise, connecté et prêt pour chaque conversation.',
+                    home_game_title: '🎮 Défi vocabulaire',
+                    home_game_subtitle: 'Associe les mots français à leurs traductions anglaises pour améliorer ton vocabulaire !',
+                    home_game_score_label: 'Score :',
+                    home_game_category_label: 'Catégorie :',
+                    home_game_category_current: 'Sélectionne une catégorie',
+                    home_game_category_choose: 'Choisis une catégorie de vocabulaire :',
+                    home_game_cat_random: 'Catégorie aléatoire',
+                    home_game_cat_0: 'Salutations & Politesse',
+                    home_game_cat_1: 'Animaux',
+                    home_game_cat_2: 'Couleurs',
+                    home_game_cat_3: 'Nombres',
+                    home_game_cat_4: 'Fruits & Légumes',
+                    home_game_cat_5: 'Membres de la famille',
+                    home_game_cat_6: 'École & Apprentissage',
+                    home_game_cat_7: 'Météo & Saisons',
+                    home_game_cat_8: 'Parties du corps',
+                    home_game_cat_9: 'Nourriture & Boissons',
+                    home_game_cat_10: 'Vêtements & Mode',
+                    home_game_cat_11: 'Maison & Foyer',
+                    home_game_cat_12: 'Transports',
+                    home_game_french_title: '🇫🇷 Mots en français',
+                    home_game_english_title: '🇬🇧 Mots en anglais',
+                    home_game_new: 'Nouvelle partie',
+                    home_game_hint: 'Indice',
+                    home_game_reset: 'Réinitialiser',
+                    home_contact_title: 'Contactez-nous si vous avez des questions',
+                    home_contact_text: "Nous sommes là pour vous aider ! N’hésitez pas à nous écrire.",
+                    home_signup_title: "Prêt à commencer ton aventure en anglais ?",
+                    home_signup_text: "Rejoins les nombreux élèves qui améliorent leur anglais avec Speak Easy",
+                    home_signup_button: "Je m'inscris"
+                }
+            };
+
+            function setLanguage(lang) {
+                const selectedLang = lang === 'fr' ? 'fr' : 'en';
+                document.documentElement.lang = selectedLang;
+
+                document.querySelectorAll('[data-i18n-key]').forEach(function(el) {
+                    const key = el.getAttribute('data-i18n-key');
+                    const translation = translations[selectedLang] && translations[selectedLang][key];
+                    if (translation) {
+                        el.innerHTML = translation;
+                    }
+                });
+
+                document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+                    btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === selectedLang);
+                });
+
+                localStorage.setItem('exampleLessonLang', selectedLang);
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedLang = localStorage.getItem('exampleLessonLang') || 'en';
+                setLanguage(savedLang);
+
+                document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+                    btn.addEventListener('click', function() {
+                        setLanguage(this.getAttribute('data-lang-btn'));
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

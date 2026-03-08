@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Lesson: Animals and the Environment - Speak Easy</title>
+    <meta name="description" content="Experience a complete Speak Easy lesson on Animals and the Environment with video, vocabulary, conversation, and live Paris activities.">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="Home page.html" class="logo">
+                <img src="logo.png" alt="Speak Easy Logo" class="logo-image">
+                <span class="logo-text" data-i18n-key="nav_logo">Speak Easy</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="Home page.html" data-i18n-key="nav_home">Home</a></li>
+                <li><a href="About.html" data-i18n-key="nav_about">About</a></li>
+                <li><a href="Program_description.html" data-i18n-key="nav_programs">Programs</a></li>
+                <li><a href="Example_lesson.html" data-i18n-key="nav_example">Example Lesson</a></li>
+                <li class="nav-language-item">
+                    <div class="lesson-language-toggle">
+                        <button type="button" class="lang-toggle-btn active" data-lang-btn="en">English</button>
+                        <button type="button" class="lang-toggle-btn" data-lang-btn="fr">Français</button>
+                    </div>
+                </li>
+                <li><a href="Log_in.html" id="loginLink" data-i18n-key="nav_login">Login</a></li>
+            </ul>
+            <!-- User Profile Dropdown -->
+            <div class="user-profile" id="userProfile" style="display: none;">
+                <div class="profile-icon" id="profileIcon">
+                    <span id="userInitials">JD</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="dropdown-header">
+                        <div class="user-info">
+                            <div class="user-name" id="userName">John Doe</div>
+                            <div class="user-email" id="userEmail">john.doe@example.com</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="Profile.html" class="dropdown-item">
+                            <span class="dropdown-icon">👤</span>
+                            <span data-i18n-key="profile_menu_profile">Profile</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">🛒</span>
+                            <span data-i18n-key="profile_menu_purchases">Purchases</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">📚</span>
+                            <span data-i18n-key="profile_menu_future">Future Lessons</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">⚙️</span>
+                            <span data-i18n-key="profile_menu_settings">Settings</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout-item" id="logoutBtn">
+                            <span class="dropdown-icon">🚪</span>
+                            <span data-i18n-key="profile_menu_logout">Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Lesson Header -->
+        <section class="lesson-header">
+            <div class="lesson-title-section">
+                <h1 class="lesson-title" data-i18n-key="lesson_title">🐾 Animals and the Environment</h1>
+                <p class="lesson-subtitle" data-i18n-key="lesson_subtitle">A Complete Speak Easy Learning Experience</p>
+                <div class="lesson-meta">
+                    <span class="lesson-duration" data-i18n-key="lesson_duration">⏱️ 30 min conversation + live activity</span>
+                    <span class="lesson-level" data-i18n-key="lesson_level">📚 Exmple lesson</span>
+                    <span class="lesson-age" data-i18n-key="lesson_age">👥 Ages 12-15</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson Steps -->
+        <section class="lesson-steps">
+            <div class="step-container">
+                <!-- Step 1: Watch Video -->
+                <div class="lesson-step">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h2 class="step-title" data-i18n-key="step1_title">📺 Watch Video</h2>
+                    </div>
+                    <div class="step-content">
+                        <div class="video-section">
+                            <div class="video-link-container">
+                                <div class="video-link-content">
+                                    <div class="video-link-icon">📺</div>
+                                    <h3 data-i18n-key="step1_video_heading">How does climate change affect animals?</h3>
+                                    <p data-i18n-key="step1_video_text">Watch this engaging video to learn about different species, their habitats and the impact of climate change.</p>
+                                    <a href="https://www.youtube.com/watch?v=9h7P8gWpolQ" target="_blank" class="btn-watch-video">
+                                        <span data-i18n-key="step1_video_button">Click here to watch the video</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-description">
+                                <div class="video-tips">
+                                    <h4 data-i18n-key="step1_tips_heading">💡 Tips for Watching:</h4>
+                                    <ul>
+                                        <li data-i18n-key="step1_tip1">Take notes on interesting animals you see</li>
+                                        <li data-i18n-key="step1_tip2">Pay attention to where they live</li>
+                                        <li data-i18n-key="step1_tip3">Notice how their changing environment affects them </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Review Vocabulary -->
+                <div class="lesson-step">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h2 class="step-title" data-i18n-key="step2_title">📚 Review Key Vocabulary</h2>
+                    </div>
+                    <div class="step-content">
+                        <div class="vocabulary-section">
+                            <h3 data-i18n-key="step2_heading">Essential Words for Our Conversation</h3>
+                            <div class="vocabulary-grid">
+                                <div class="vocab-card">
+                                    <div class="vocab-word">Habitat</div>
+                                    <div class="vocab-meaning" data-i18n-key="vocab_habitat_meaning">The natural home of an animal</div>
+                                    <div class="vocab-example" data-i18n-key="vocab_habitat_example">"The forest is the habitat of many birds."</div>
+                                </div>
+                                <div class="vocab-card">
+                                    <div class="vocab-word">Endangered</div>
+                                    <div class="vocab-meaning" data-i18n-key="vocab_endangered_meaning">At risk of extinction</div>
+                                    <div class="vocab-example" data-i18n-key="vocab_endangered_example">"Pandas are endangered animals."</div>
+                                </div>
+                                <div class="vocab-card">
+                                    <div class="vocab-word">Environment</div>
+                                    <div class="vocab-meaning" data-i18n-key="vocab_environment_meaning">The natural world around us</div>
+                                    <div class="vocab-example" data-i18n-key="vocab_environment_example">"We must protect our environment."</div>
+                                </div>
+                                <div class="vocab-card">
+                                    <div class="vocab-word">Recycle</div>
+                                    <div class="vocab-meaning" data-i18n-key="vocab_recycle_meaning">To use something again</div>
+                                    <div class="vocab-example" data-i18n-key="vocab_recycle_example">"We recycle plastic bottles."</div>
+                                </div>
+                                <div class="vocab-card">
+                                    <div class="vocab-word">Conservation</div>
+                                    <div class="vocab-meaning" data-i18n-key="vocab_conservation_meaning">Protecting nature</div>
+                                    <div class="vocab-example" data-i18n-key="vocab_conservation_example">"Conservation helps save animals."</div>
+                                </div>
+                                <div class="vocab-card">
+                                    <div class="vocab-word">Ecosystem</div>
+                                    <div class="vocab-meaning" data-i18n-key="vocab_ecosystem_meaning">A community of living things</div>
+                                    <div class="vocab-example" data-i18n-key="vocab_ecosystem_example">"The ocean is a large ecosystem."</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Conversation -->
+                <div class="lesson-step">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h2 class="step-title" data-i18n-key="step3_title">🗣️ Easy Conversation (30 minutes)</h2>
+                    </div>
+                    <div class="step-content">
+                        <div class="conversation-section">
+                            <div class="conversation-intro">
+                                <h3 data-i18n-key="conv_ready_title">Ready to Chat?</h3>
+                                <p data-i18n-key="conv_ready_text">Join your instructor for a relaxed 30-minute conversation about animals and the environment. Don't worry about making mistakes - this is your safe space to practice!</p>
+                            </div>
+                            <div class="conversation-questions">
+                                <h3 data-i18n-key="conv_topics_title">Conversation Topics</h3>
+                                <div class="question-list">
+                                    <div class="question-item">
+                                        <div class="question-icon">🐾</div>
+                                        <div class="question-text" data-i18n-key="q1_text">What is your favorite animal? Why?</div>
+                                    </div>
+                                    <div class="question-item">
+                                        <div class="question-icon">🏠</div>
+                                        <div class="question-text" data-i18n-key="q2_text">Do you have any pets?</div>
+                                    </div>
+                                    <div class="question-item">
+                                        <div class="question-icon">🌍</div>
+                                        <div class="question-text" data-i18n-key="q3_text">Where do these animals live?</div>
+                                    </div>
+                                    <div class="question-item">
+                                        <div class="question-icon">🌱</div>
+                                        <div class="question-text" data-i18n-key="q4_text">How can we protect the environment?</div>
+                                    </div>
+                                    <div class="question-item">
+                                        <div class="question-icon">♻️</div>
+                                        <div class="question-text" data-i18n-key="q5_text">What do you recycle at home?</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="conversation-tips">
+                                <h4 data-i18n-key="conv_tips_title">💬 Conversation Tips:</h4>
+                                <ul>
+                                    <li data-i18n-key="conv_tip1">Speak naturally - don't worry about perfect grammar</li>
+                                    <li data-i18n-key="conv_tip2">Use the vocabulary words you learned</li>
+                                    <li data-i18n-key="conv_tip3">Ask questions back to your instructor</li>
+                                    <li data-i18n-key="conv_tip4">Share personal experiences and opinions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Track Progress -->
+                <div class="lesson-step">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <h2 class="step-title" data-i18n-key="step4_title">📊 Keep Track of Your Progress</h2>
+                    </div>
+                    <div class="step-content">
+                        <div class="progress-section">
+                            <h3 data-i18n-key="progress_title">Your Learning Journey</h3>
+                            <div class="progress-checklist">
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="video-watched">
+                                    <label for="video-watched" data-i18n-key="progress_check1">✅ Watched the Amazing Animals video</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="vocab-reviewed">
+                                    <label for="vocab-reviewed" data-i18n-key="progress_check2">✅ Reviewed key vocabulary words</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="conversation-completed">
+                                    <label for="conversation-completed" data-i18n-key="progress_check3">✅ Completed 30-minute conversation</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="live-activity">
+                                    <label for="live-activity" data-i18n-key="progress_check4">✅ Participated in live Paris activity</label>
+                                </div>
+                            </div>
+                            <div class="progress-summary">
+                                <h4 data-i18n-key="progress_summary_title">🎯 What You've Learned:</h4>
+                                <ul>
+                                    <li data-i18n-key="progress_point1">Animal vocabulary and habitats</li>
+                                    <li data-i18n-key="progress_point2">Environmental protection concepts</li>
+                                    <li data-i18n-key="progress_point3">Conversation skills about nature</li>
+                                    <li data-i18n-key="progress_point4">Real-world English practice</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Live Paris Activity -->
+                <div class="lesson-step highlight-step">
+                    <div class="step-header">
+                        <div class="step-number">5</div>
+                        <h2 class="step-title" data-i18n-key="step5_title">🗼 Live Paris Experience </h2>
+                    </div>
+                    <div class="step-content">
+                        <div class="live-activity-section">
+                            <div class="activity-intro">
+                                <h3 data-i18n-key="live_title">🌟 The Ultimate Learning Experience</h3>
+                                <p data-i18n-key="live_text">Meet in Paris for an exciting "live" conversation adventure! Explore with 3 to 5 students  either a museum, park, or other activity. Have fun while speaking English!</p>
+                            </div>
+                            <div class="activity-options">
+                                <h3 data-i18n-key="live_choose_title">Choose Your Adventure:</h3>
+                                <div class="activity-grid">
+                                    <div class="activity-card">
+                                        <div class="activity-icon">🏛️</div>
+                                        <h4 data-i18n-key="act1_title">Natural History Museum</h4>
+                                        <p data-i18n-key="act1_text">Explore animal exhibits and learn about conservation efforts while practicing English with your group.</p>
+                                    </div>
+                                    <div class="activity-card">
+                                        <div class="activity-icon">🌳</div>
+                                        <h4 data-i18n-key="act2_title">Jardin des Plantes</h4>
+                                        <p data-i18n-key="act2_text">Walk through beautiful gardens, discuss plant and animal life, and enjoy nature while speaking English.</p>
+                                    </div>
+                                    <div class="activity-card">
+                                        <div class="activity-icon">🐒</div>
+                                        <h4 data-i18n-key="act3_title">Ménagerie Zoo</h4>
+                                        <p data-i18n-key="act3_text">Visit the historic zoo, observe animals, and discuss their habitats and conservation in English.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="activity-benefits">
+                                <h4 data-i18n-key="live_why_title">🎉 What Makes This Special:</h4>
+                                <ul>
+                                    <li data-i18n-key="live_why1"><strong>Small Groups:</strong> Maximum 5 students for personalized attention</li>
+                                    <li data-i18n-key="live_why2"><strong>Real Context:</strong> Learn English while exploring real places</li>
+                                    <li data-i18n-key="live_why3"><strong>Fun Learning:</strong> Enjoy Paris while practicing conversation</li>
+                                    <li data-i18n-key="live_why4"><strong>Confidence Building:</strong> Speak English in real-world situations</li>
+                                    <li data-i18n-key="live_why5"><strong>Cultural Experience:</strong> Discover Paris through English conversation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p data-i18n-key="footer_text">&copy; 2024 Speak Easy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const translations = {
+                en: {
+                    nav_logo: 'Speak Easy',
+                    nav_home: 'Home',
+                    nav_about: 'About',
+                    nav_programs: 'Programs',
+                    nav_example: 'Example Lesson',
+                    nav_login: 'Login',
+                    lesson_title: '🐾 Animals and the Environment',
+                    lesson_subtitle: 'A Complete Speak Easy Learning Experience',
+                    lesson_duration: '⏱️ 30 min conversation + live activity',
+                    lesson_level: '📚 Exmple lesson',
+                    lesson_age: '👥 Ages 12-15',
+                    step1_title: '📺 Watch Video',
+                    step1_video_heading: 'How does climate change affect animals?',
+                    step1_video_text: 'Watch this engaging video to learn about different species, their habitats and the impact of climate change.',
+                    step1_video_button: 'Click here to watch the video',
+                    step1_tips_heading: '💡 Tips for Watching:',
+                    step1_tip1: 'Take notes on interesting animals you see',
+                    step1_tip2: 'Pay attention to where they live',
+                    step1_tip3: 'Notice how their changing environment affects them ',
+                    step2_title: '📚 Review Key Vocabulary',
+                    step2_heading: 'Essential Words for Our Conversation',
+                    vocab_habitat_meaning: 'The natural home of an animal',
+                    vocab_habitat_example: '"The forest is the habitat of many birds."',
+                    vocab_endangered_meaning: 'At risk of extinction',
+                    vocab_endangered_example: '"Pandas are endangered animals."',
+                    vocab_environment_meaning: 'The natural world around us',
+                    vocab_environment_example: '"We must protect our environment."',
+                    vocab_recycle_meaning: 'To use something again',
+                    vocab_recycle_example: '"We recycle plastic bottles."',
+                    vocab_conservation_meaning: 'Protecting nature',
+                    vocab_conservation_example: '"Conservation helps save animals."',
+                    vocab_ecosystem_meaning: 'A community of living things',
+                    vocab_ecosystem_example: '"The ocean is a large ecosystem."',
+                    step3_title: '🗣️ Easy Conversation (30 minutes)',
+                    conv_ready_title: 'Ready to Chat?',
+                    conv_ready_text: 'Join your instructor for a relaxed 30-minute conversation about animals and the environment. Don\'t worry about making mistakes - this is your safe space to practice!',
+                    conv_topics_title: 'Conversation Topics',
+                    q1_text: 'What is your favorite animal? Why?',
+                    q2_text: 'Do you have any pets?',
+                    q3_text: 'Where do these animals live?',
+                    q4_text: 'How can we protect the environment?',
+                    q5_text: 'What do you recycle at home?',
+                    conv_tips_title: '💬 Conversation Tips:',
+                    conv_tip1: 'Speak naturally - don\'t worry about perfect grammar',
+                    conv_tip2: 'Use the vocabulary words you learned',
+                    conv_tip3: 'Ask questions back to your instructor',
+                    conv_tip4: 'Share personal experiences and opinions',
+                    step4_title: '📊 Keep Track of Your Progress',
+                    progress_title: 'Your Learning Journey',
+                    progress_check1: '✅ Watched the Amazing Animals video',
+                    progress_check2: '✅ Reviewed key vocabulary words',
+                    progress_check3: '✅ Completed 30-minute conversation',
+                    progress_check4: '✅ Participated in live Paris activity',
+                    progress_summary_title: '🎯 What You\'ve Learned:',
+                    progress_point1: 'Animal vocabulary and habitats',
+                    progress_point2: 'Environmental protection concepts',
+                    progress_point3: 'Conversation skills about nature',
+                    progress_point4: 'Real-world English practice',
+                    step5_title: '🗼 Live Paris Experience ',
+                    live_title: '🌟 The Ultimate Learning Experience',
+                    live_text: 'Meet in Paris for an exciting "live" conversation adventure! Explore with 3 to 5 students  either a museum, park, or other activity. Have fun while speaking English!',
+                    live_choose_title: 'Choose Your Adventure:',
+                    act1_title: 'Natural History Museum',
+                    act1_text: 'Explore animal exhibits and learn about conservation efforts while practicing English with your group.',
+                    act2_title: 'Jardin des Plantes',
+                    act2_text: 'Walk through beautiful gardens, discuss plant and animal life, and enjoy nature while speaking English.',
+                    act3_title: 'Ménagerie Zoo',
+                    act3_text: 'Visit the historic zoo, observe animals, and discuss their habitats and conservation in English.',
+                    live_why_title: '🎉 What Makes This Special:',
+                    live_why1: '<strong>Small Groups:</strong> Maximum 5 students for personalized attention',
+                    live_why2: '<strong>Real Context:</strong> Learn English while exploring real places',
+                    live_why3: '<strong>Fun Learning:</strong> Enjoy Paris while practicing conversation',
+                    live_why4: '<strong>Confidence Building:</strong> Speak English in real-world situations',
+                    live_why5: '<strong>Cultural Experience:</strong> Discover Paris through English conversation',
+                    footer_text: '&copy; 2024 Speak Easy. All rights reserved.',
+                    profile_menu_profile: 'Profile',
+                    profile_menu_purchases: 'Purchases',
+                    profile_menu_future: 'Future Lessons',
+                    profile_menu_settings: 'Settings',
+                    profile_menu_logout: 'Logout'
+                },
+                fr: {
+                    nav_logo: 'Speak Easy',
+                    nav_home: 'Accueil',
+                    nav_about: 'À propos',
+                    nav_programs: 'Programmes',
+                    nav_example: 'Leçon d\'exemple',
+                    nav_login: 'Connexion',
+                    lesson_title: '🐾 Les animaux et l\'environnement',
+                    lesson_subtitle: 'Une expérience d\'apprentissage Speak Easy complète',
+                    lesson_duration: '⏱️ 30 min de conversation + activité en direct',
+                    lesson_level: '📚 Leçon d\'exemple',
+                    lesson_age: '👥 Âges 12-15 ans',
+                    step1_title: '📺 Regarder la vidéo',
+                    step1_video_heading: 'Comment le changement climatique affecte-t-il les animaux ?',
+                    step1_video_text: 'Regarde cette vidéo inspirante pour découvrir différentes espèces, leurs habitats et l\'impact du changement climatique.',
+                    step1_video_button: 'Clique ici pour regarder la vidéo',
+                    step1_tips_heading: '💡 Conseils pour regarder :',
+                    step1_tip1: 'Prends des notes sur les animaux qui t\'intéressent',
+                    step1_tip2: 'Fais attention aux endroits où ils vivent',
+                    step1_tip3: 'Observe comment leur environnement change et les affecte',
+                    step2_title: '📚 Réviser le vocabulaire clé',
+                    step2_heading: 'Mots essentiels pour notre conversation',
+                    vocab_habitat_meaning: 'Le lieu de vie naturel d\'un animal',
+                    vocab_habitat_example: '"La forêt est l\'habitat de nombreux oiseaux."',
+                    vocab_endangered_meaning: 'En risque de disparition',
+                    vocab_endangered_example: '"Les pandas sont des animaux en danger."',
+                    vocab_environment_meaning: 'Le monde naturel qui nous entoure',
+                    vocab_environment_example: '"Nous devons protéger notre environnement."',
+                    vocab_recycle_meaning: 'Utiliser quelque chose une nouvelle fois',
+                    vocab_recycle_example: '"Nous recyclons les bouteilles en plastique."',
+                    vocab_conservation_meaning: 'Protection de la nature',
+                    vocab_conservation_example: '"La conservation aide à sauver les animaux."',
+                    vocab_ecosystem_meaning: 'Une communauté d\'êtres vivants',
+                    vocab_ecosystem_example: '"L\'océan est un grand écosystème."',
+                    step3_title: '🗣️ Conversation facile (30 minutes)',
+                    conv_ready_title: 'Prêt à discuter ?',
+                    conv_ready_text: 'Rejoins ton professeur pour une conversation détendue de 30 minutes sur les animaux et l\'environnement. Ne t\'inquiète pas pour les erreurs : c\'est un espace sûr pour pratiquer !',
+                    conv_topics_title: 'Sujets de conversation',
+                    q1_text: 'Quel est ton animal préféré ? Pourquoi ?',
+                    q2_text: 'As-tu des animaux de compagnie ?',
+                    q3_text: 'Où vivent ces animaux ?',
+                    q4_text: 'Comment pouvons-nous protéger l\'environnement ?',
+                    q5_text: 'Que recycles-tu à la maison ?',
+                    conv_tips_title: '💬 Conseils pour la conversation :',
+                    conv_tip1: 'Parle naturellement - ne t\'inquiète pas d\'avoir une grammaire parfaite',
+                    conv_tip2: 'Utilise les mots de vocabulaire que tu as appris',
+                    conv_tip3: 'Pose aussi des questions à ton professeur',
+                    conv_tip4: 'Partage tes expériences et tes opinions personnelles',
+                    step4_title: '📊 Suivre tes progrès',
+                    progress_title: 'Ton parcours d\'apprentissage',
+                    progress_check1: '✅ Vidéo "Amazing Animals" regardée',
+                    progress_check2: '✅ Vocabulaire clé révisé',
+                    progress_check3: '✅ Conversation de 30 minutes terminée',
+                    progress_check4: '✅ Activité en direct à Paris réalisée',
+                    progress_summary_title: '🎯 Ce que tu as appris :',
+                    progress_point1: 'Vocabulaire sur les animaux et leurs habitats',
+                    progress_point2: 'Notions de protection de l\'environnement',
+                    progress_point3: 'Compétences de conversation sur la nature',
+                    progress_point4: 'Pratique de l\'anglais en situation réelle',
+                    step5_title: '🗼 Expérience en direct à Paris ',
+                    live_title: '🌟 L\'expérience d\'apprentissage ultime',
+                    live_text: 'Retrouve-nous à Paris pour une aventure de conversation "en direct" ! Explore un musée, un parc ou une autre activité en petits groupes de 3 à 5 élèves et amuse-toi en parlant anglais !',
+                    live_choose_title: 'Choisis ton aventure :',
+                    act1_title: 'Muséum national d\'Histoire naturelle',
+                    act1_text: 'Découvre les expositions sur les animaux et les actions de conservation tout en pratiquant ton anglais avec le groupe.',
+                    act2_title: 'Jardin des Plantes',
+                    act2_text: 'Promène-toi dans de beaux jardins, parle des plantes et des animaux et profite de la nature en anglais.',
+                    act3_title: 'Ménagerie du Jardin des Plantes',
+                    act3_text: 'Visite le zoo historique, observe les animaux et discute de leurs habitats et de leur protection en anglais.',
+                    live_why_title: '🎉 Pourquoi c\'est spécial :',
+                    live_why1: '<strong>Petits groupes :</strong> Maximum 5 élèves pour une attention personnalisée',
+                    live_why2: '<strong>Contexte réel :</strong> Apprends l\'anglais en explorant de vrais lieux',
+                    live_why3: '<strong>Apprentissage ludique :</strong> Profite de Paris tout en pratiquant la conversation',
+                    live_why4: '<strong>Confiance en soi :</strong> Parle anglais dans des situations réelles',
+                    live_why5: '<strong>Expérience culturelle :</strong> Découvre Paris à travers la conversation en anglais',
+                    footer_text: '&copy; 2024 Speak Easy. Tous droits réservés.',
+                    profile_menu_profile: 'Profil',
+                    profile_menu_purchases: 'Achats',
+                    profile_menu_future: 'Leçons futures',
+                    profile_menu_settings: 'Paramètres',
+                    profile_menu_logout: 'Déconnexion'
+                }
+            };
+
+            function setLanguage(lang) {
+                const selectedLang = lang === 'fr' ? 'fr' : 'en';
+                document.documentElement.lang = selectedLang;
+
+                document.querySelectorAll('[data-i18n-key]').forEach(function(el) {
+                    const key = el.getAttribute('data-i18n-key');
+                    const translation = translations[selectedLang] && translations[selectedLang][key];
+                    if (translation) {
+                        el.innerHTML = translation;
+                    }
+                });
+
+                document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+                    btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === selectedLang);
+                });
+
+                localStorage.setItem('exampleLessonLang', selectedLang);
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedLang = localStorage.getItem('exampleLessonLang') || 'en';
+                setLanguage(savedLang);
+
+                document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+                    btn.addEventListener('click', function() {
+                        setLanguage(this.getAttribute('data-lang-btn'));
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
+

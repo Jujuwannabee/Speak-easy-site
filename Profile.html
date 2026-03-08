@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Speak Easy</title>
+    <meta name="description" content="Manage your Speak Easy profile and account settings.">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="Home page.html" class="logo">
+                <img src="logo.png" alt="Speak Easy Logo" class="logo-image">
+                <span class="logo-text">Speak Easy</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Program_description.html">Programs</a></li>
+                <li><a href="Log_in.html" id="loginLink">Login</a></li>
+            </ul>
+            <!-- User Profile Dropdown -->
+            <div class="user-profile" id="userProfile" style="display: none;">
+                <div class="profile-icon" id="profileIcon">
+                    <span id="userInitials">JD</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="dropdown-header">
+                        <div class="user-info">
+                            <div class="user-name" id="userName">John Doe</div>
+                            <div class="user-email" id="userEmail">john.doe@example.com</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="Profile.html" class="dropdown-item">
+                            <span class="dropdown-icon">👤</span>
+                            Profile
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">🛒</span>
+                            Purchases
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">📚</span>
+                            Future Lessons
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">⚙️</span>
+                            Settings
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout-item" id="logoutBtn">
+                            <span class="dropdown-icon">🚪</span>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Profile Header -->
+        <section class="profile-header">
+            <div class="profile-avatar">
+                <img src="logo.png" alt="Profile Avatar" class="profile-avatar-image">
+                <div class="profile-status">
+                    <span class="status-indicator"></span>
+                    <span class="status-text">Active</span>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name" id="profilePageName">John Doe</h1>
+                <p class="profile-email" id="profilePageEmail">john.doe@example.com</p>
+                <p class="profile-member-since">Member since <span id="memberSince">January 2024</span></p>
+            </div>
+            <div class="profile-actions">
+                <button class="btn-edit-profile">Edit Profile</button>
+                <button class="btn-change-password">Change Password</button>
+            </div>
+        </section>
+
+        <!-- Profile Content -->
+        <section class="profile-content">
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="progress">Progress</button>
+                <button class="tab-btn" data-tab="achievements">Achievements</button>
+                <button class="tab-btn" data-tab="settings">Settings</button>
+            </div>
+
+            <!-- Overview Tab -->
+            <div class="tab-content active" id="overview">
+                <div class="profile-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-info">
+                            <h3>Lessons Completed</h3>
+                            <p class="stat-number">24</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-info">
+                            <h3>Study Time</h3>
+                            <p class="stat-number">48 hours</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <h3>Current Streak</h3>
+                            <p class="stat-number">7 days</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-info">
+                            <h3>Achievements</h3>
+                            <p class="stat-number">12</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <h4>Completed Lesson: "Daily Conversations"</h4>
+                                <p>2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">🎮</div>
+                            <div class="activity-content">
+                                <h4>Played Vocabulary Game</h4>
+                                <p>Score: 85% - 1 day ago</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📈</div>
+                            <div class="activity-content">
+                                <h4>Level Up: Intermediate</h4>
+                                <p>3 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tab -->
+            <div class="tab-content" id="progress">
+                <div class="progress-section">
+                    <h2>Learning Progress</h2>
+                    <div class="progress-chart">
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Vocabulary</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Speaking</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Listening</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Grammar</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Tab -->
+            <div class="tab-content" id="achievements">
+                <div class="achievements-section">
+                    <h2>Your Achievements</h2>
+                    <div class="achievements-grid">
+                        <div class="achievement-card earned">
+                            <div class="achievement-icon">🏆</div>
+                            <h3>First Lesson</h3>
+                            <p>Complete your first lesson</p>
+                        </div>
+                        <div class="achievement-card earned">
+                            <div class="achievement-icon">🔥</div>
+                            <h3>Streak Master</h3>
+                            <p>Study for 7 days in a row</p>
+                        </div>
+                        <div class="achievement-card earned">
+                            <div class="achievement-icon">📚</div>
+                            <h3>Bookworm</h3>
+                            <p>Complete 20 lessons</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🎯</div>
+                            <h3>Perfect Score</h3>
+                            <p>Get 100% on a vocabulary test</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div class="tab-content" id="settings">
+                <div class="settings-section">
+                    <h2>Account Settings</h2>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label for="displayName">Display Name</label>
+                            <input type="text" id="displayName" value="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" value="john.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Preferred Language</label>
+                            <select id="language">
+                                <option value="en">English</option>
+                                <option value="fr">French</option>
+                                <option value="es">Spanish</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notifications">Email Notifications</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="lessonReminders" checked>
+                                <label for="lessonReminders">Lesson Reminders</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="progressUpdates" checked>
+                                <label for="progressUpdates">Progress Updates</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-save-settings">Save Settings</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Speak Easy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

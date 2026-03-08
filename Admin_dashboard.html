@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Speak Easy</title>
+    <meta name="description" content="Admin dashboard for Speak Easy">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="Home page.html" class="logo">
+                <img src="logo.png" alt="Speak Easy Logo" class="logo-image">
+                <span class="logo-text">Speak Easy Admin</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="Admin_dashboard.html">Dashboard</a></li>
+                <li><a href="#" id="adminLogoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="admin-dashboard">
+            <h1 class="section-title">Admin Dashboard</h1>
+            
+            <!-- Statistics Cards -->
+            <div class="admin-stats-grid">
+                <div class="admin-stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <h3>Total Users</h3>
+                        <p class="stat-number" id="totalUsers">0</p>
+                    </div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="stat-icon">📧</div>
+                    <div class="stat-content">
+                        <h3>Users with Email</h3>
+                        <p class="stat-number" id="usersWithEmail">0</p>
+                    </div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="stat-icon">🌐</div>
+                    <div class="stat-content">
+                        <h3>Total Site Visits</h3>
+                        <p class="stat-number" id="totalVisits">0</p>
+                    </div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-content">
+                        <h3>Unique Visitors</h3>
+                        <p class="stat-number" id="uniqueVisitors">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Users List Section -->
+            <div class="admin-section">
+                <h2>Registered Users</h2>
+                <p class="section-subtitle">All users who have signed up or logged in</p>
+                <div class="users-table-container">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Username</th>
+                                <th>Last Login</th>
+                                <th>Sign Up Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <!-- Users will be populated here -->
+                        </tbody>
+                    </table>
+                    <div id="noUsersMessage" class="no-data-message" style="display: none;">
+                        <p>No users registered yet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Site Visit Statistics -->
+            <div class="admin-section">
+                <h2>Site Visit Statistics</h2>
+                <div class="visits-chart-container">
+                    <div class="visit-stat-item">
+                        <h3>Today's Visits</h3>
+                        <p class="visit-number" id="todayVisits">0</p>
+                    </div>
+                    <div class="visit-stat-item">
+                        <h3>This Week's Visits</h3>
+                        <p class="visit-number" id="weekVisits">0</p>
+                    </div>
+                    <div class="visit-stat-item">
+                        <h3>This Month's Visits</h3>
+                        <p class="visit-number" id="monthVisits">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+

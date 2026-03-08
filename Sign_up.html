@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Speak Easy</title>
+    <meta name="description" content="Create your Speak Easy account and start your English learning journey today.">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="Home page.html" class="logo">
+                <img src="logo.png" alt="Speak Easy Logo" class="logo-image">
+                <span class="logo-text">Speak Easy</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Program_description.html">Programs</a></li>
+                <li><a href="Example_lesson.html">Example Lesson</a></li>
+                <li><a href="Log_in.html" id="loginLink">Login</a></li>
+            </ul>
+            <!-- User Profile Dropdown -->
+            <div class="user-profile" id="userProfile" style="display: none;">
+                <div class="profile-icon" id="profileIcon">
+                    <span id="userInitials">JD</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="dropdown-header">
+                        <div class="user-info">
+                            <div class="user-name" id="userName">John Doe</div>
+                            <div class="user-email" id="userEmail">john.doe@example.com</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="Profile.html" class="dropdown-item">
+                            <span class="dropdown-icon">👤</span>
+                            Profile
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">🛒</span>
+                            Purchases
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">📚</span>
+                            Future Lessons
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="dropdown-icon">⚙️</span>
+                            Settings
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item logout-item" id="logoutBtn">
+                            <span class="dropdown-icon">🚪</span>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="signup-form-container">
+            <h1 class="signup-form-title">Create Your Account</h1>
+            <p class="signup-form-subtitle">Join thousands of students improving their English skills with Speak Easy</p>
+            
+            <form class="signup-form" id="signupForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" name="password" required>
+                        <small class="password-hint">Must be at least 8 characters long</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <select id="age" name="age" required>
+                            <option value="">Select your age</option>
+                            <option value="5-8">5-8 years</option>
+                            <option value="9-12">9-12 years</option>
+                            <option value="13-15">13-15 years</option>
+                            <option value="16-18">16-18 years</option>
+                            <option value="19+">19+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="englishLevel">Current English Level *</label>
+                        <select id="englishLevel" name="englishLevel" required>
+                            <option value="">Select your level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="elementary">Elementary</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="upper-intermediate">Upper Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="learningGoals">What are your main learning goals? *</label>
+                    <textarea id="learningGoals" name="learningGoals" rows="3" placeholder="e.g., Improve speaking skills, expand vocabulary, prepare for exams..." required></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="#" class="link-terms">Terms of Service</a> and <a href="#" class="link-terms">Privacy Policy</a> *
+                    </label>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <span class="checkmark"></span>
+                        I would like to receive updates about new courses and learning tips
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-signup-submit">Create Account</button>
+            </form>
+            
+            <div class="login-link">
+                <p>Already have an account? <a href="Log_in.html">Sign in here</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
